@@ -1,0 +1,1 @@
+This `Privacy Policy` is written for the [Stars Tracker API](https://api.starstracker.xyz)
