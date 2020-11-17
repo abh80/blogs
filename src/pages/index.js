@@ -68,10 +68,9 @@ function TwitterSection() {
     </div>
   );
 }
-
 function Home() {
   React.useEffect(function mount() {
-    fetch("YOUR_URL")
+    fetch("https://safeazureservicepack.techixspotifyco.repl.co/tweet")
       .then((res) => res.json())
       .then((res) => {
         if (res.text.includes("@")) {
@@ -91,7 +90,7 @@ function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
+      description="Stars Tracker blog"
     >
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">

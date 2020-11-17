@@ -18,8 +18,19 @@ module.exports = {
         sidebarPath: require.resolve("./sidebarPolicies.js"),
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id : "guide",
+        path :"guides",
+        editUrl : "https://github.com/blogs/abh80/blogs/guides",
+        routeBasePath : "guides",
+        sidebarPath : require.resolve("./sidebarGuides.js")
+      }
+    ]
   ],
   themeConfig: {
+    hideableSidebar: true,
     navbar: {
       title: "Stars Tracker Blogs",
       logo: {
@@ -28,7 +39,7 @@ module.exports = {
       },
       items: [
         { to: "blog", label: "Blog", position: "left" },
-        { to: "guides", label: "Guides", position: "right" },
+        { to: "guides/Ffmpeg/Getting%20Started", label: "Guides", position: "left" },
         {
           href: "https://github.com/abh80/blogs",
           label: "GitHub",
@@ -47,11 +58,24 @@ module.exports = {
               to: "blog",
             },
             {
+              label : "Guide",
+              to : "guides/Ffmpeg/Getting%20Started"
+            },
+            {
               label: "GitHub",
               href: "https://github.com/abh80/blogs",
             },
           ],
         },
+        {
+          title : "Home",
+          items : [
+            {
+              label : "Home",
+              to : "/"
+            }
+          ]
+        }
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Abh80, Inc. Built with Docusaurus.`,
     },
@@ -59,12 +83,7 @@ module.exports = {
   presets: [
     [
       "@docusaurus/preset-classic",
-      {
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/abh80/blogs",
-        },
+{
         blog: {
           showReadingTime: true,
           // Please change this to your repo.

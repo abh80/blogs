@@ -1,1 +1,0 @@
-Comming soon docs for Stars Tracker API
