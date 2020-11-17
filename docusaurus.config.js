@@ -7,6 +7,7 @@ module.exports = {
   favicon: "img/favicon.ico",
   organizationName: "abh80", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
+  onBrokenLinks: "ignore",
   plugins: [
     [
       "@docusaurus/plugin-content-docs",
@@ -21,13 +22,13 @@ module.exports = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id : "guide",
-        path :"guides",
-        editUrl : "https://github.com/blogs/abh80/blogs/guides",
-        routeBasePath : "guides",
-        sidebarPath : require.resolve("./sidebarGuides.js")
-      }
-    ]
+        id: "guide",
+        path: "guides",
+        editUrl: "https://github.com/blogs/abh80/blogs/guides",
+        routeBasePath: "guides",
+        sidebarPath: require.resolve("./sidebarGuides.js"),
+      },
+    ],
   ],
   themeConfig: {
     hideableSidebar: true,
@@ -39,7 +40,11 @@ module.exports = {
       },
       items: [
         { to: "blog", label: "Blog", position: "left" },
-        { to: "guides/Ffmpeg/Getting%20Started", label: "Guides", position: "left" },
+        {
+          to: "guides/Ffmpeg/Getting%20Started",
+          label: "Guides",
+          position: "left",
+        },
         {
           href: "https://github.com/abh80/blogs",
           label: "GitHub",
@@ -58,8 +63,8 @@ module.exports = {
               to: "blog",
             },
             {
-              label : "Guide",
-              to : "guides/Ffmpeg/Getting%20Started"
+              label: "Guide",
+              to: "guides/Ffmpeg/Getting%20Started",
             },
             {
               label: "GitHub",
@@ -68,14 +73,14 @@ module.exports = {
           ],
         },
         {
-          title : "Home",
-          items : [
+          title: "Home",
+          items: [
             {
-              label : "Home",
-              to : "/"
-            }
-          ]
-        }
+              label: "Home",
+              to: "/",
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Abh80, Inc. Built with Docusaurus.`,
     },
@@ -83,7 +88,7 @@ module.exports = {
   presets: [
     [
       "@docusaurus/preset-classic",
-{
+      {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
