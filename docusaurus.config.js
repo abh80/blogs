@@ -14,7 +14,7 @@ module.exports = {
       {
         id: "policies",
         path: "policies",
-        editUrl: "https://github.com/blogs/abh80/blogs",
+        editUrl: "https://github.com/abh80/blogs/tree/master",
         routeBasePath: "policies",
         sidebarPath: require.resolve("./sidebarPolicies.js"),
       },
@@ -24,7 +24,7 @@ module.exports = {
       {
         id: "guide",
         path: "guides",
-        editUrl: "https://github.com/blogs/abh80/blogs/guides",
+        editUrl: "https://github.com/abh80/blogs/tree/master",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebarGuides.js"),
       },
@@ -92,7 +92,7 @@ module.exports = {
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl: "https://github.com/ah80/blogs",
+          editUrl: "https://github.com/abh80/blogs/tree/master",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

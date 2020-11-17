@@ -36,6 +36,9 @@ function Feature({ imageUrl, title, description }) {
     </div>
   );
 }
+function Contributors() {
+  return <div id="Contributors"></div>;
+}
 function TwitterSection() {
   return (
     <div className="twitterCard">
@@ -70,6 +73,18 @@ function TwitterSection() {
 }
 function Home() {
   React.useEffect(function mount() {
+    fetch("https://api.github.com/repos/abh80/blogs/contributors")
+      .then((x) => x.json())
+      .then((x) => {
+        if(document.getElementById("Contributors").innerHTML)return
+        for (let i = 0; i < x.length; i++) {
+          document.getElementById("Contributors").innerHTML += `<a href=${
+            "https://github.com/" + x[i].login
+          } target = "_blank">
+              <img src=${x[i].avatar_url} alt="avatar" />
+            </a>`;
+        }
+      });
     fetch("https://safeazureservicepack.techixspotifyco.repl.co/tweet")
       .then((res) => res.json())
       .then((res) => {
@@ -122,6 +137,12 @@ function Home() {
             </div>
           </section>
         )}
+        <div className="Contributors">
+          <div className="Contributors--h">
+            <u>Contributors</u>
+          </div>
+          <Contributors />
+        </div>
       </main>
     </Layout>
   );
