@@ -96,3 +96,6 @@
   margin-bottom: 200px;
   margin-left : 160px;
 }
+html{
+    scroll-behavior: smooth;
+}
