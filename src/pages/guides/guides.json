@@ -1,0 +1,20 @@
+[
+  {
+    "name": "FFmpeg Guide",
+    "desc": "A guide for FFmpeg",
+    "url": "/Ffmpeg/Getting%20Started",
+    "img": "img/covers/ffmpeg.png"
+  },
+  {
+    "name": "Sharex Server Guide",
+    "desc": "A guide for making sharex server",
+    "url": "/Sharex-Server/Getting%20Started",
+    "img": "img/covers/sharex.png"
+  },
+  {
+    "name": "Highlight.js Guide",
+    "desc": "Highlight code syntax of your site",
+    "url": "/Highlightjs/Introduction",
+    "img": "img/covers/highlight.js.png"
+  }
+]

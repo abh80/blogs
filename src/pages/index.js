@@ -76,7 +76,7 @@ function Home() {
     fetch("https://api.github.com/repos/abh80/blogs/contributors")
       .then((x) => x.json())
       .then((x) => {
-        if(document.getElementById("Contributors").innerHTML)return
+        if (document.getElementById("Contributors").innerHTML) return;
         for (let i = 0; i < x.length; i++) {
           document.getElementById("Contributors").innerHTML += `<a href=${
             "https://github.com/" + x[i].login

@@ -15,6 +15,7 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  --ifm-card-color: #303030;
 }
 
 .docusaurus-highlight-code-line {
@@ -98,4 +99,45 @@
 }
 html {
   scroll-behavior: smooth;
+}
+.mainSection {
+  margin-top: 60px;
+  margin-left: 50px;
+  margin-bottom: 60px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header--b {
+  font-size: 2em;
+  font-weight: 200px;
+}
+.guide---cards {
+  height: 20px;
+  background-color: var(--ifm-card-color);
+  width: 100%;
+  height: 440px;
+  max-width: 25%;
+  margin-right: 20px;
+  margin-bottom : 20px;
+}
+.guide---c {
+  font-size: 2em;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.header---e {
+  margin-bottom: 20px;
+}
+.name {
+  font-size: 2em;
+}
+.desc {
+  font-size: 1.2em;
+}
+.image {
+  width: 88%;
+  height: 60%;
 }

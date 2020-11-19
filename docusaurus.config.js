@@ -33,6 +33,14 @@ module.exports = {
         showLastUpdateTime: true,
       },
     ],
+    [
+      "@docusaurus/plugin-content-pages",
+      {
+        path: "src/pages/guides",
+        routeBasePath: "guides",
+        id :"guide",
+      },
+    ],
   ],
   themeConfig: {
     prism: {
@@ -48,7 +56,7 @@ module.exports = {
       items: [
         { to: "blog", label: "Blog", position: "left" },
         {
-          to: "guides/Ffmpeg/Getting%20Started",
+          to: "guides/",
           label: "Guides",
           position: "left",
         },
@@ -71,7 +79,7 @@ module.exports = {
             },
             {
               label: "Guide",
-              to: "guides/Ffmpeg/Getting%20Started",
+              to: "guides/",
             },
             {
               label: "GitHub",
