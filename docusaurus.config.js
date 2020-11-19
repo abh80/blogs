@@ -8,6 +8,7 @@ module.exports = {
   organizationName: "abh80", // Usually your GitHub org/user name.
   projectName: "docusaurus", // Usually your repo name.
   onBrokenLinks: "ignore",
+  themes: ["@docusaurus/theme-live-codeblock"],
   plugins: [
     [
       "@docusaurus/plugin-content-docs",
@@ -27,10 +28,17 @@ module.exports = {
         editUrl: "https://github.com/abh80/blogs/tree/master",
         routeBasePath: "guides",
         sidebarPath: require.resolve("./sidebarGuides.js"),
+        remarkPlugins: [require("@docusaurus/remark-plugin-npm2yarn")],
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
   ],
   themeConfig: {
+    prism: {
+      theme: require("prism-react-renderer/themes/github"),
+      darkTheme: require("prism-react-renderer/themes/dracula"),
+    },
     hideableSidebar: true,
     navbar: {
       title: "Stars Tracker Blogs",

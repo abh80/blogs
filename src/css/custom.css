@@ -94,8 +94,8 @@
   top: 20px;
   display: block;
   margin-bottom: 200px;
-  margin-left : 160px;
+  margin-left: 140px;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
