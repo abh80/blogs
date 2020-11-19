@@ -8,7 +8,7 @@ module.exports = {
     {
       type : "category",
       label : "Sharex Server Guide",
-      items : ["Sharex-Server/Getting Started","Sharex-Server/Writing Code"]
+      items : ["Sharex-Server/Getting Started","Sharex-Server/Writing Code","Sharex-Server/Getting Token","Sharex-Server/Sharex Config"]
     },
     {
       type: "category",
