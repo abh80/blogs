@@ -9,6 +9,11 @@ module.exports = {
       type : "category",
       label : "Sharex Server Guide",
       items : ["Sharex-Server/Getting Started","Sharex-Server/Writing Code"]
+    },
+    {
+      type: "category",
+      label: "Highlight.js",
+      items: ["Highlightjs/Introduction","Highlightjs/Highlighting"]
     }
   ],
 };
