@@ -9,5 +9,6 @@ module.exports = {
       type: "category",
       label: "Highlight.js",
       items: ["Highlight.js/Introduction","Highlight.js/Highlighting"]
+    }
   ],
 };
