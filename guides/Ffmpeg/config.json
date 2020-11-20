@@ -2,5 +2,10 @@
   "main": "Getting Started.md",
   "img": "ffmpeg.png",
   "description": "A guide for FFmpeg",
-  "name": "FFmpeg Guide"
+  "name": "FFmpeg Guide",
+  "sidebar":[
+    "Getting Started",
+    "Basic Functions",
+    "Audio Effects"
+  ]
 }

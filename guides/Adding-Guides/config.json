@@ -1,0 +1,7 @@
+{
+  "main": "Contributing.md",
+  "img": "logo.png",
+  "description": "A guide for adding your own guide",
+  "name": "Adding Guides",
+  "sidebar": ["Contributing"]
+}

@@ -33,7 +33,7 @@ dirs.forEach((dir) => {
     );
     generateError();
   }
-  const { main, img, description, name } = require("./guides/" +
+  const { main, img, description, name, sidebar } = require("./guides/" +
     dir +
     "/config.json");
   if (!main || !img || !description || !name) {
@@ -70,6 +70,7 @@ dirs.forEach((dir) => {
     items: [],
   };
   let files = fs.readdirSync("./guides/" + dir);
+  files = files.filter((file) => file.endsWith(".md"));
   if (!files.length) {
     console.log(
       chalk.red(
@@ -78,9 +79,20 @@ dirs.forEach((dir) => {
     );
     generateError();
   }
-  files = files.filter((file) => file.endsWith(".md"));
-  for (let x = 0; x < files.length; x++) {
-    c.items.push(dir + "/" + files[x].split(".")[0]);
+  if (!sidebar || !sidebar.length) {
+    console.log(
+      chalk.red(
+        "\nMissing sidebar in config : " + join(__dirname, "guides", dir)
+      )
+    );
+    generateError();
+  }
+  for (let x = 0; x < sidebar.length; x++) {
+    if (!files.includes(sidebar[x] + ".md")) {
+      console.log(chalk.red("\nFile does not exist : " + sidebar[x] + ".md"));
+      generateError();
+    }
+    c.items.push(dir + "/" + sidebar[x]);
   }
   sideBar.push(c);
 });
@@ -115,6 +127,6 @@ setTimeout(() => {
     generateError();
   }
   console.log(
-    chalk.green("\nSuccesfully wrote new files\n\nHappy Contributing!")
+    chalk.green("\nSuccesfully wrote generated files\n\nHappy Contributing!")
   );
 }, 2000);

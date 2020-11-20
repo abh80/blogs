@@ -13,7 +13,9 @@ Paste the following in `config.json` and replace with your choice -
   "main": "MAIN File.md",
   "img": "some_image.png",
   "description": "A guide....",
-  "name": "The main heading"
+  "name": "The main heading",
+  "sidebar": ["Getting Started"]
 }
 ```
+
 Now run `npm install` and the run `npm generate` this will generate required file and make a Pull Request afterwards!

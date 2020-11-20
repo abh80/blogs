@@ -14,5 +14,5 @@
 */
 
 module.exports = {
-Guides :[{"type":"category","label":"FFmpeg Guide","items":["Ffmpeg/Audio Effects","Ffmpeg/Basic Functions","Ffmpeg/Getting Started"]},{"type":"category","label":"Highlight.js Guide","items":["Highlightjs/Highlighting","Highlightjs/Introduction"]},{"type":"category","label":"Sharex Server Guide","items":["Sharex-Server/Getting Started","Sharex-Server/Getting Token","Sharex-Server/Sharex Config","Sharex-Server/Writing Code"]}]
+Guides :[{"type":"category","label":"Adding Guides","items":["Adding-Guides/Contributing"]},{"type":"category","label":"FFmpeg Guide","items":["Ffmpeg/Getting Started","Ffmpeg/Basic Functions","Ffmpeg/Audio Effects"]},{"type":"category","label":"Highlight.js Guide","items":["Highlightjs/Introduction","Highlightjs/Highlighting"]},{"type":"category","label":"Sharex Server Guide","items":["Sharex-Server/Getting Started","Sharex-Server/Getting Token","Sharex-Server/Writing Code","Sharex-Server/Sharex Config"]}]
 }
