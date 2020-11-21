@@ -120,7 +120,7 @@ html {
   height: 440px;
   max-width: 25%;
   margin-right: 20px;
-  margin-bottom : 20px;
+  margin-bottom: 20px;
 }
 .guide---c {
   font-size: 2em;
@@ -142,5 +142,20 @@ html {
   height: 60%;
 }
 .g-signin2 {
-  margin-left:20px;;
+  margin-left: 20px;
+}
+.imageuser {
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.google--user-content-200928383 {
+  background-color: var(--ifm-card-color);
+  border-radius: 20px;
+  max-height: 35px;
+}
+.imageuser:hover {
+  cursor: pointer;
 }

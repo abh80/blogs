@@ -52,16 +52,27 @@ function Footer() {
     return null;
   }
   React.useEffect(function mount() {
-    if (
-      document.getElementsByClassName("navbar__items navbar__items--right")[0]
-        .innerHTML.includes(`
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>`)
-    )
-      return;
-    document.getElementsByClassName(
-      "navbar__items navbar__items--right"
-    )[0].innerHTML += `
+    let user = window.localStorage.getItem("user");
+    if (user) {
+      user = JSON.parse(user);
+      if (
+        document
+          .getElementsByClassName("navbar__items")[0]
+          .innerHTML.includes(user.name)
+      )
+        return;
+      document.getElementsByClassName(
+        "navbar__items"
+      )[0].innerHTML += `<div class = "google--user-content-200928383"><img  class = "imageuser" src ="${user.img}" /><div style="float:right;margin-top:5px;margin-left:10px;margin-right:10px;">${user.name}</div></div>`;
+    } else {
+      if (
+        document.getElementsByClassName("navbar__items")[0].innerHTML.includes(`
+    <div class="g-signin2"`)
+      )
+        return;
+      document.getElementsByClassName("navbar__items")[0].innerHTML += `
     <div class="g-signin2" data-onsuccess="onSignIn"></div>`;
+    }
   });
   return (
     <footer
@@ -70,11 +81,13 @@ function Footer() {
       })}
     >
       <Head>
+        <script src="/themeChange.js" />
         <script
           src="https://apis.google.com/js/platform.js"
           async
           defer
         ></script>
+        <script src="/gauthHandler.js" />
         <meta
           name="google-signin-client_id"
           content="1031722786374-gsmevlsgl1l2g3uk1hdku0n3oipviqgn.apps.googleusercontent.com"
@@ -142,7 +155,6 @@ function Footer() {
           </div>
         )}
       </div>
-      <script src="/signin.js" />
     </footer>
   );
 }

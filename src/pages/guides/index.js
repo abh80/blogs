@@ -5,45 +5,9 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "../styles.module.css";
-import Head from '@docusaurus/Head';
 
 function Guide() {
   const guides = require("./guides.json");
-  React.useEffect(function mount() {
-    function changeTheme() {
-      let theme2 = null;
-      window.localStorage.theme
-        ? (theme2 = window.localStorage.getItem("theme"))
-        : (theme2 = "light");
-      switch (theme2) {
-        case "light":
-          document.documentElement.style.setProperty(
-            "--ifm-card-color",
-            "#e3d8d8"
-          );
-          break;
-        case "dark":
-          document.documentElement.style.setProperty(
-            "--ifm-card-color",
-            "#303030"
-          );
-          break;
-        default:
-          document.documentElement.style.setProperty(
-            "--ifm-card-color",
-            "white"
-          );
-      }
-    }
-    document
-      .getElementsByClassName("react-toggle")[0]
-      .addEventListener("click", () => {
-        setTimeout(() => {
-          changeTheme();
-        }, 100);
-      });
-  });
-
   return (
     <Layout
       title={`Stars Tracker Guides`}

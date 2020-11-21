@@ -8,4 +8,5 @@ function onSignIn(googleUser) {
     email: profile.getEmail(),
   };
   window.localStorage.setItem("user", JSON.stringify(structure));
+  window.location.reload()
 }
