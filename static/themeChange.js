@@ -22,6 +22,7 @@ function signOut() {
   });
 }
 window.onload = () => {
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   changeTheme();
   document
     .getElementsByClassName("react-toggle")[0]
@@ -35,6 +36,9 @@ window.onload = () => {
   });
   const elem = document.getElementsByClassName("imageuser")[0];
   if (!elem) return;
+  if(isMobile){
+    document.getElementsByClassName("google-user-text-content")[0].style.display = "none"
+  }
   elem.addEventListener("mouseenter", function (event) {
     event.target.src = "/img/red_cross.png";
   });

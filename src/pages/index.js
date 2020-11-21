@@ -61,6 +61,7 @@ function TwitterSection() {
           src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_normal.jpg"
           alt="tweeter"
         />
+
         <p>@realdonaldtrump</p>
       </a>
       <div className="twittertext" id="twittertext">
@@ -99,7 +100,8 @@ function Home() {
         document.getElementById("twittertext").innerHTML = res.text;
         document.getElementById("timesection").textContent =
           "At " + res.created_at.replace("+0000 2020", "");
-      });
+      })
+      .catch((e) => (document.getElementById("twittertext").innerHTML = `<p style = "color : red;">Error : ${e}</p>`));
   });
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
