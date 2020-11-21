@@ -5,9 +5,10 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "../styles.module.css";
+import Head from '@docusaurus/Head';
 
 function Guide() {
-  const guides = require("./guides.json")
+  const guides = require("./guides.json");
   React.useEffect(function mount() {
     function changeTheme() {
       let theme2 = null;
@@ -70,11 +71,7 @@ function Guide() {
                       <span className="guide---c desc">{e.desc}</span>
                     </div>
                     <div className="guide---c image">
-                      <img
-                        src={useBaseUrl(e.img)}
-                        width="100%"
-                        height="100%"
-                      />
+                      <img src={useBaseUrl(e.img)} width="100%" height="100%" />
                     </div>
                     <div className={styles.buttons}>
                       <Link
