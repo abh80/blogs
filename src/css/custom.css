@@ -30,6 +30,7 @@
   height: 300px;
   color: white; /* to keep white always */
   border-radius: 0.5em;
+  max-width : 100%;
 }
 .twittertext {
   font-size: 1.5em;

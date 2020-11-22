@@ -8,5 +8,12 @@ function onSignIn(googleUser) {
     email: profile.getEmail(),
   };
   window.localStorage.setItem("user", JSON.stringify(structure));
-  window.location.reload()
+  window.location.reload();
+}
+function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    window.localStorage.removeItem("user");
+    window.location.reload();
+  });
 }

@@ -14,15 +14,9 @@ function changeTheme() {
       document.documentElement.style.setProperty("--ifm-card-color", "white");
   }
 }
-function signOut() {
-  var auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(function () {
-    window.localStorage.removeItem("user");
-    window.location.reload();
-  });
-}
+
 window.onload = () => {
-  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   changeTheme();
   document
     .getElementsByClassName("react-toggle")[0]
@@ -34,10 +28,11 @@ window.onload = () => {
   gapi.load("auth2", function () {
     gapi.auth2.init();
   });
+  const isMobile = window.screen.width <= 480;
   const elem = document.getElementsByClassName("imageuser")[0];
   if (!elem) return;
-  if(isMobile){
-    document.getElementsByClassName("google-user-text-content")[0].style.display = "none"
+  if (isMobile) {
+    document.getElementsByClassName("twittertext")[0].style.maxWidth = "400px"
   }
   elem.addEventListener("mouseenter", function (event) {
     event.target.src = "/img/red_cross.png";

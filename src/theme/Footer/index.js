@@ -53,12 +53,23 @@ function Footer() {
   }
   React.useEffect(function mount() {
     let user = window.localStorage.getItem("user");
+    const isMobile = window.screen.width <= 480;
     if (user) {
       user = JSON.parse(user);
       if (
+        !document
+          .getElementsByClassName("menu__list")[0]
+          .innerHTML.includes(user.name)
+      ) {
+        document.getElementsByClassName(
+          "menu__list"
+        )[0].innerHTML += `<div class = "google--user-content-200928383"><img  class = "imageuser" src ="${user.img}" /><div class= "google-user-text-content" style="float:right;margin-top:5px;margin-left:10px;margin-right:10px;">${user.name}</div></div>`;
+      }
+      if (
         document
           .getElementsByClassName("navbar__items")[0]
-          .innerHTML.includes(user.name)
+          .innerHTML.includes(user.name) ||
+        isMobile
       )
         return;
       document.getElementsByClassName(
@@ -66,8 +77,19 @@ function Footer() {
       )[0].innerHTML += `<div class = "google--user-content-200928383"><img  class = "imageuser" src ="${user.img}" /><div class= "google-user-text-content" style="float:right;margin-top:5px;margin-left:10px;margin-right:10px;">${user.name}</div></div>`;
     } else {
       if (
+        isMobile &&
+        !document
+          .getElementsByClassName("menu__list")[0]
+          .innerHTML.includes(`<div class="g-signin2"`)
+      ) {
+        document.getElementsByClassName(
+          "menu__list"
+        )[0].innerHTML += `<div class="g-signin2" data-onsuccess="onSignIn"></div>`;
+      }
+      if (
         document.getElementsByClassName("navbar__items")[0].innerHTML.includes(`
-    <div class="g-signin2"`)
+    <div class="g-signin2"`) ||
+        isMobile
       )
         return;
       document.getElementsByClassName("navbar__items")[0].innerHTML += `
