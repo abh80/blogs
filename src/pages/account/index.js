@@ -16,7 +16,7 @@ function SignOut1(setShowSignOut, isMobile) {
           zIndex: 3,
           position: "absolute",
           top: "180px",
-          marginLeft: "50px",
+          marginLeft: isMobile?"50px":"580px",
         }}
       >
         <h6
