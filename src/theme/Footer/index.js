@@ -74,7 +74,7 @@ function Footer() {
         return;
       document.getElementsByClassName(
         "navbar__items"
-      )[0].innerHTML += `<div class = "google--user-content-200928383"><img  class = "imageuser" src ="${user.img}" /><div class= "google-user-text-content" style="float:right;margin-top:5px;margin-left:10px;margin-right:10px;">${user.name}</div></div>`;
+      )[0].innerHTML += `<a href = "/account" style = "text-decoration:none;color:inherit;"><div class = "google--user-content-200928383"><img  class = "imageuser" src ="${user.img}" /><div class= "google-user-text-content" style="float:right;margin-top:5px;margin-left:10px;margin-right:10px;">${user.name}</div></div></a>`;
     } else {
       if (
         isMobile &&

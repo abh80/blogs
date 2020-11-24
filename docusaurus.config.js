@@ -38,7 +38,15 @@ module.exports = {
       {
         path: "src/pages/guides",
         routeBasePath: "guides",
-        id :"guide",
+        id: "guide",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-pages",
+      {
+        path: "src/pages/account",
+        routeBasePath: "account",
+        id: "account",
       },
     ],
   ],
