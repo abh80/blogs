@@ -53,12 +53,12 @@ function TwitterSection() {
       </a>
       <a
         className="tweeterdetails"
-        href="https://twitter.com/realdonaldtrump"
+        href="https://twitter.com/JoeBiden"
         target="_blank"
       >
         <img
           className="twitterImg"
-          src = "https://pbs.twimg.com/profile_images/1308769664240160770/AfgzWVE7_400x400.jpg"
+          src = "https://pbs.twimg.com/profile_images/1308769664240160770/AfgzWVE7_normal.jpg"
           alt="tweeter"
         />
 
