@@ -58,11 +58,11 @@ function TwitterSection() {
       >
         <img
           className="twitterImg"
-          src="https://pbs.twimg.com/profile_images/874276197357596672/kUuht00m_normal.jpg"
+          src = "https://pbs.twimg.com/profile_images/1308769664240160770/AfgzWVE7_400x400.jpg"
           alt="tweeter"
         />
 
-        <p>@realdonaldtrump</p>
+        <p>@JoeBiden</p>
       </a>
       <div className="twittertext" id="twittertext">
         Please Wait Loading Tweet
